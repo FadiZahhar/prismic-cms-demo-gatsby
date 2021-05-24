@@ -75,13 +75,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <header>
+      <Header>
         <NavLinks>
       <StaticQuery
         query={`${navigationQuery}`}
         render={(data) => {
           console.log(data);
-          return data.prismic.allNavigations.edgets[0].node.navigation_links.map((link) => {
+          return data.prismic.allNavigations.edges[0].node.navigation_links.map((link) => {
             return(
               <NavLink key={link.link._meta.uid}>
                 <Link to={`/${link.link._meta.uid}`}>
@@ -92,7 +92,7 @@ const Layout = ({ children }) => {
           })
             }} />
           </NavLinks>
-        </header>
+        </Header>
         <MainWrapper>{children}</MainWrapper>
 
     </>
