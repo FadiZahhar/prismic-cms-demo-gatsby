@@ -8,8 +8,13 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
 import "./layout.css"
+import styled from 'styled-components';
+
+const MainWrapper = styled.main`
+  max-width:800px;
+  margin:0 auto;
+`
 
 const Layout = ({ children }) => {
 
@@ -17,7 +22,7 @@ const Layout = ({ children }) => {
   return (
     <>
 
-        <main>{children}</main>
+        <MainWrapper>{children}</MainWrapper>
 
     </>
   )
