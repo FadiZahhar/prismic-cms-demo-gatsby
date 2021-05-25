@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from './hero';
+import CallToActionGrid from './callToActionGrid';
 
 const SliceZone = ({ body }) => {
 console.log(body);
